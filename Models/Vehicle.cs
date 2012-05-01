@@ -12,13 +12,13 @@ namespace VIS.Models
 		public int YearOfMake { get; set; }
 		public string Color { get; set; }
 		public DateTime PurchaseDate { get; set; }
-		public double Cost { get; set; }
+		public decimal Cost { get; set; }
 		public string Dealer { get; set; }
 		public string FuelType { get; set; }
 
 		public string RegistrationNo { get; set; }
 		public DateTime RegistrationDate { get; set; }
-		public double RoadTax { get; set; }
+		public decimal RoadTax { get; set; }
 		public int ChasisNo { get; set; }
 		public DateTime InspectionDue { get; set; }
 		public string VehicleStatus { get; set; }
@@ -26,8 +26,8 @@ namespace VIS.Models
 		public string PolicyType { get; set; }
 		public string Policy { get; set; }
 		public int PolicyNumber { get; set; }
-		public double VehicleValue { get; set; }
-		public double Amount { get; set; }
+		public decimal VehicleValue { get; set; }
+		public decimal Amount { get; set; }
 		public DateTime PolicyDate { get; set; }
 		public DateTime PolicyExpireDate { get; set; }
 
