@@ -13,6 +13,7 @@ namespace VIS.Models
 		[DisplayName("Year of Make")]
 		public int YearOfMake { get; set; }
 		public string Color { get; set; }
+        [DisplayName("Date of Purchase")]
 		public DateTime PurchaseDate { get; set; }
 		public decimal Cost { get; set; }
 		public string Dealer { get; set; }
