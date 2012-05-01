@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel;
 
 namespace VIS.Models
 {
@@ -9,6 +10,7 @@ namespace VIS.Models
 	{
 		public int VehicleID { get; set; }
 		public string Model { get; set; }
+		[DisplayName("Year of Make")]
 		public int YearOfMake { get; set; }
 		public string Color { get; set; }
 		public DateTime PurchaseDate { get; set; }
