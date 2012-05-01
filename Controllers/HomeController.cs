@@ -10,13 +10,8 @@ namespace VIS.Controllers
 	{
 		public ActionResult Index()
 		{
-			ViewBag.Message = "Welcome to ASP.NET MVC!";
+			ViewBag.Message = "Dashboard";
 
-			return View();
-		}
-
-		public ActionResult About()
-		{
 			return View();
 		}
 	}
