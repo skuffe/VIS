@@ -1,0 +1,195 @@
+﻿@model VIS.Models.Vehicle
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Vehicle</legend>
+
+        @Html.HiddenFor(model => model.VehicleID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Model)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Model)
+            @Html.ValidationMessageFor(model => model.Model)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.YearOfMake)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.YearOfMake)
+            @Html.ValidationMessageFor(model => model.YearOfMake)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Color)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Color)
+            @Html.ValidationMessageFor(model => model.Color)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PurchaseDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PurchaseDate)
+            @Html.ValidationMessageFor(model => model.PurchaseDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cost)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cost)
+            @Html.ValidationMessageFor(model => model.Cost)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Dealer)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Dealer)
+            @Html.ValidationMessageFor(model => model.Dealer)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FuelType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FuelType)
+            @Html.ValidationMessageFor(model => model.FuelType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RegistrationNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RegistrationNo)
+            @Html.ValidationMessageFor(model => model.RegistrationNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RegistrationDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RegistrationDate)
+            @Html.ValidationMessageFor(model => model.RegistrationDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.RoadTax)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.RoadTax)
+            @Html.ValidationMessageFor(model => model.RoadTax)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ChasisNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ChasisNo)
+            @Html.ValidationMessageFor(model => model.ChasisNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InspectionDue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.InspectionDue)
+            @Html.ValidationMessageFor(model => model.InspectionDue)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleStatus)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleStatus)
+            @Html.ValidationMessageFor(model => model.VehicleStatus)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AgencyID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AgencyID)
+            @Html.ValidationMessageFor(model => model.AgencyID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PolicyType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PolicyType)
+            @Html.ValidationMessageFor(model => model.PolicyType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Policy)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Policy)
+            @Html.ValidationMessageFor(model => model.Policy)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PolicyNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PolicyNumber)
+            @Html.ValidationMessageFor(model => model.PolicyNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.VehicleValue)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.VehicleValue)
+            @Html.ValidationMessageFor(model => model.VehicleValue)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Amount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Amount)
+            @Html.ValidationMessageFor(model => model.Amount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PolicyDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PolicyDate)
+            @Html.ValidationMessageFor(model => model.PolicyDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PolicyExpireDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PolicyExpireDate)
+            @Html.ValidationMessageFor(model => model.PolicyExpireDate)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

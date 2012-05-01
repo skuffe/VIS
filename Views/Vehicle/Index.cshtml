@@ -1,0 +1,153 @@
+﻿@model IEnumerable<VIS.Models.Vehicle>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Model
+        </th>
+        <th>
+            YearOfMake
+        </th>
+        <th>
+            Color
+        </th>
+        <th>
+            PurchaseDate
+        </th>
+        <th>
+            Cost
+        </th>
+        <th>
+            Dealer
+        </th>
+        <th>
+            FuelType
+        </th>
+        <th>
+            RegistrationNo
+        </th>
+        <th>
+            RegistrationDate
+        </th>
+        <th>
+            RoadTax
+        </th>
+        <th>
+            ChasisNo
+        </th>
+        <th>
+            InspectionDue
+        </th>
+        <th>
+            VehicleStatus
+        </th>
+        <th>
+            AgencyID
+        </th>
+        <th>
+            PolicyType
+        </th>
+        <th>
+            Policy
+        </th>
+        <th>
+            PolicyNumber
+        </th>
+        <th>
+            VehicleValue
+        </th>
+        <th>
+            Amount
+        </th>
+        <th>
+            PolicyDate
+        </th>
+        <th>
+            PolicyExpireDate
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearOfMake)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PurchaseDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dealer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FuelType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RegistrationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoadTax)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChasisNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InspectionDue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgencyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Policy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VehicleValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PolicyExpireDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VehicleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VehicleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VehicleID })
+        </td>
+    </tr>
+}
+
+</table>
