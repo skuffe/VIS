@@ -15,7 +15,8 @@ namespace VIS.Models
 		public int YearOfMake { get; set; }
 		public string Color { get; set; }
         [DisplayName("Date of Purchase")]
-		public DateTime PurchaseDate { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? PurchaseDate { get; set; }
 		public decimal Cost { get; set; }
 		public string Dealer { get; set; }
 		[DisplayName("Fuel Type")]
@@ -25,13 +26,15 @@ namespace VIS.Models
 		[RegularExpression("([A-Z]){2}([0-9]){5}")]
 		public string RegistrationNo { get; set; }
 		[DisplayName("Date of Registration")]
-		public DateTime RegistrationDate { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? RegistrationDate { get; set; }
 		[DisplayName("Road Tax")]
 		public decimal RoadTax { get; set; }
 		[DisplayName("Chasis Number")]
 		public int ChasisNo { get; set; }
 		[DisplayName("Inspection Due")]
-		public DateTime InspectionDue { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? InspectionDue { get; set; }
 		[DisplayName("Vehicle Status")]
 		public string VehicleStatus { get; set; }
 
@@ -44,9 +47,11 @@ namespace VIS.Models
 		public decimal VehicleValue { get; set; }
 		public decimal Amount { get; set; }
 		[DisplayName("Policy Date")]
-		public DateTime PolicyDate { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? PolicyDate { get; set; }
 		[DisplayName("Policy Expire Date")]
-		public DateTime PolicyExpireDate { get; set; }
+		[DataType(DataType.Date)]
+		public DateTime? PolicyExpireDate { get; set; }
 
 		public int InsuranceAgencyID { get; set; }
 		public virtual InsuranceAgency InsuranceAgency { get; set; }
