@@ -23,7 +23,6 @@ namespace VIS.Models
 		public DateTime InspectionDue { get; set; }
 		public string VehicleStatus { get; set; }
 
-		public int AgencyID { get; set; }
 		public string PolicyType { get; set; }
 		public string Policy { get; set; }
 		public int PolicyNumber { get; set; }
@@ -32,6 +31,7 @@ namespace VIS.Models
 		public DateTime PolicyDate { get; set; }
 		public DateTime PolicyExpireDate { get; set; }
 
-		public InsuranceAgency InsuranceAgency { get; set; }
+		public int InsuranceAgencyID { get; set; }
+		public virtual InsuranceAgency InsuranceAgency { get; set; }
 	}
 }

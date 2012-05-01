@@ -14,6 +14,6 @@ namespace VIS.Models
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<VIS.Models.VISContext>());
 
 		public DbSet<Vehicle> Vehicles { get; set; }
-		public DbSet<InsuranceAgency> InsuranceAgency { get; set; }
+		public DbSet<InsuranceAgency> InsuranceAgencies { get; set; }
 	}
 }

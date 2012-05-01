@@ -14,5 +14,7 @@ namespace VIS.Models
 		public string City { get; set; }
 		public int Phone { get; set; }
 		public string Mail { get; set; }
+
+		public virtual ICollection<Vehicle> Vehicle { get; set; }
 	}
 }

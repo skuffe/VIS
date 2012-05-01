@@ -18,7 +18,7 @@ namespace VIS.Controllers
 
         public ViewResult Index()
         {
-            return View(db.InsuranceAgency.ToList());
+            return View(db.InsuranceAgencies.ToList());
         }
 
         //
@@ -26,7 +26,7 @@ namespace VIS.Controllers
 
         public ViewResult Details(int id)
         {
-            InsuranceAgency insuranceagency = db.InsuranceAgency.Find(id);
+            InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
             return View(insuranceagency);
         }
 
@@ -46,7 +46,7 @@ namespace VIS.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.InsuranceAgency.Add(insuranceagency);
+                db.InsuranceAgencies.Add(insuranceagency);
                 db.SaveChanges();
                 return RedirectToAction("Index");  
             }
@@ -59,7 +59,7 @@ namespace VIS.Controllers
  
         public ActionResult Edit(int id)
         {
-            InsuranceAgency insuranceagency = db.InsuranceAgency.Find(id);
+            InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
             return View(insuranceagency);
         }
 
@@ -83,7 +83,7 @@ namespace VIS.Controllers
  
         public ActionResult Delete(int id)
         {
-            InsuranceAgency insuranceagency = db.InsuranceAgency.Find(id);
+            InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
             return View(insuranceagency);
         }
 
@@ -93,8 +93,8 @@ namespace VIS.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            InsuranceAgency insuranceagency = db.InsuranceAgency.Find(id);
-            db.InsuranceAgency.Remove(insuranceagency);
+            InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
+            db.InsuranceAgencies.Remove(insuranceagency);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

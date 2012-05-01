@@ -51,9 +51,6 @@
             VehicleStatus
         </th>
         <th>
-            AgencyID
-        </th>
-        <th>
             PolicyType
         </th>
         <th>
@@ -73,6 +70,9 @@
         </th>
         <th>
             PolicyExpireDate
+        </th>
+        <th>
+            InsuranceAgency
         </th>
         <th></th>
     </tr>
@@ -119,9 +119,6 @@
             @Html.DisplayFor(modelItem => item.VehicleStatus)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.AgencyID)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.PolicyType)
         </td>
         <td>
@@ -141,6 +138,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PolicyExpireDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InsuranceAgency.Name)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.VehicleID }) |

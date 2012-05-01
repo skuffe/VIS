@@ -75,11 +75,6 @@
         @Html.DisplayFor(model => model.VehicleStatus)
     </div>
 
-    <div class="display-label">AgencyID</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.AgencyID)
-    </div>
-
     <div class="display-label">PolicyType</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.PolicyType)
@@ -113,6 +108,11 @@
     <div class="display-label">PolicyExpireDate</div>
     <div class="display-field">
         @Html.DisplayFor(model => model.PolicyExpireDate)
+    </div>
+
+    <div class="display-label">InsuranceAgency</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.InsuranceAgency.Name)
     </div>
 </fieldset>
 @using (Html.BeginForm()) {

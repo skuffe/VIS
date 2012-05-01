@@ -119,14 +119,6 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AgencyID)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.AgencyID)
-            @Html.ValidationMessageFor(model => model.AgencyID)
-        </div>
-
-        <div class="editor-label">
             @Html.LabelFor(model => model.PolicyType)
         </div>
         <div class="editor-field">
@@ -180,6 +172,14 @@
         <div class="editor-field">
             @Html.EditorFor(model => model.PolicyExpireDate)
             @Html.ValidationMessageFor(model => model.PolicyExpireDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.InsuranceAgencyID, "InsuranceAgency")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("InsuranceAgencyID", "---- Select Agency ----")
+            @Html.ValidationMessageFor(model => model.InsuranceAgencyID)
         </div>
 
         <p>

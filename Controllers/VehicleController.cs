@@ -18,7 +18,8 @@ namespace VIS.Controllers
 
         public ViewResult Index()
         {
-            return View(db.Vehicles.ToList());
+            var vehicles = db.Vehicles.Include(v => v.InsuranceAgency);
+            return View(vehicles.ToList());
         }
 
         //
@@ -35,6 +36,7 @@ namespace VIS.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.InsuranceAgencyID = new SelectList(db.InsuranceAgencies, "InsuranceAgencyID", "Name");
             return View();
         } 
 
@@ -51,6 +53,7 @@ namespace VIS.Controllers
                 return RedirectToAction("Index");  
             }
 
+            ViewBag.InsuranceAgencyID = new SelectList(db.InsuranceAgencies, "InsuranceAgencyID", "Name", vehicle.InsuranceAgencyID);
             return View(vehicle);
         }
         
@@ -60,6 +63,7 @@ namespace VIS.Controllers
         public ActionResult Edit(int id)
         {
             Vehicle vehicle = db.Vehicles.Find(id);
+            ViewBag.InsuranceAgencyID = new SelectList(db.InsuranceAgencies, "InsuranceAgencyID", "Name", vehicle.InsuranceAgencyID);
             return View(vehicle);
         }
 
@@ -75,6 +79,7 @@ namespace VIS.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.InsuranceAgencyID = new SelectList(db.InsuranceAgencies, "InsuranceAgencyID", "Name", vehicle.InsuranceAgencyID);
             return View(vehicle);
         }
 
