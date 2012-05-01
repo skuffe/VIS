@@ -11,6 +11,9 @@ namespace VIS.Controllers
 	{
 		public ActionResult Index()
 		{
+            VISContext dbContext = new VISContext();
+
+            ViewBag.vehicles = (from v in dbContext.Vehicles select v).Count();
 			return View();
 		}
 	}
