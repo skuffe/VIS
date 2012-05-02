@@ -69,7 +69,8 @@
             @Html.LabelFor(model => model.FuelType)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.FuelType)
+            @*@Html.EditorFor(model => model.FuelType)*@
+			@Html.DropDownList("FuelTypesSelectList", "---- Select Fuel Type ----")	
             @Html.ValidationMessageFor(model => model.FuelType)
         </div>
 		</div>

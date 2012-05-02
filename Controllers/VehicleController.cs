@@ -44,6 +44,11 @@ namespace VIS.Controllers
         public ActionResult Create()
         {
             ViewBag.InsuranceAgencyID = new SelectList(db.InsuranceAgencies, "InsuranceAgencyID", "Name");
+
+			var fueltypes = from FuelType s in Enum.GetValues(typeof(FuelType))
+						   select new { ID = s, Name = s.ToString() };
+			ViewBag.FuelTypesSelectList = new SelectList(fueltypes, "ID", "Name");
+
             return View();
         } 
 

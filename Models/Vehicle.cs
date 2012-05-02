@@ -7,6 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VIS.Models
 {
+	public enum FuelType
+	{
+		DIESEL,
+		GASOLINE,
+		ELECTRIC
+	}
 	public class Vehicle
 	{
 		public int VehicleID { get; set; }
@@ -34,7 +40,7 @@ namespace VIS.Models
 
 		[Required]
 		[DisplayName("Fuel Type")]
-		public string FuelType { get; set; }
+		public FuelType FuelType { get; set; }
 
 		[Required]
 		[DisplayName("Registration Number")]
