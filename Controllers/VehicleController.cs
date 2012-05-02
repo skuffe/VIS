@@ -17,9 +17,13 @@ namespace VIS.Controllers
         // GET: /Vehicle/
 
 		[Authorize]
-        public ViewResult Index()
+        public ViewResult Index(string searchString)
         {
             var vehicles = db.Vehicles.Include(v => v.InsuranceAgency);
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                vehicles = vehicles.Where(s => s.Model.ToUpper().Contains(searchString.ToUpper()));
+            }
             return View(vehicles.ToList());
         }
 

@@ -17,9 +17,13 @@ namespace VIS.Controllers
         // GET: /InsuranceAgency/
 
 		[Authorize]
-        public ViewResult Index()
+        public ViewResult Index(string searchString)
         {
-			var insuranceAgencies = db.InsuranceAgencies.OrderByDescending(a => a.Name);
+			IQueryable<VIS.Models.InsuranceAgency> insuranceAgencies = db.InsuranceAgencies.OrderByDescending(a => a.Name);
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                insuranceAgencies = insuranceAgencies.Where(a => a.Name.ToUpper().Contains(searchString.ToUpper()));
+            }
             return View(insuranceAgencies.ToList());
         }
 
