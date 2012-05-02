@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using VIS.Models;
+
+namespace VIS.Controllers
+{
+	public class HomeController : Controller
+	{
+		public ActionResult Index()
+		{
+<<<<<<< HEAD
+=======
+            VISContext dbContext = new VISContext();
+			ViewBag.Message = "Dashboard";
+
+            ViewBag.vehicles = (from v in dbContext.Vehicles select v).Count();
+
+>>>>>>> 7e57ed66ca6d9ac8909c22782a9bd8423207e52c
+			return View();
+		}
+	}
+}
