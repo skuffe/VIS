@@ -19,7 +19,8 @@ namespace VIS.Controllers
 		[Authorize]
         public ViewResult Index()
         {
-            return View(db.InsuranceAgencies.ToList());
+			var insuranceAgencies = db.InsuranceAgencies.OrderByDescending(a => a.Name);
+            return View(insuranceAgencies.ToList());
         }
 
         //

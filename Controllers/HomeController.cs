@@ -11,10 +11,11 @@ namespace VIS.Controllers
 	{
 		public ActionResult Index()
 		{
-            VISContext dbContext = new VISContext();
-
-            ViewBag.vehicles = (from v in dbContext.Vehicles select v).Count();
-			return View();
+			if (Request.IsAuthenticated) {
+				return RedirectToAction("Index", "Dashboard");
+			} else {
+				return View();
+			}
 		}
 	}
 }
