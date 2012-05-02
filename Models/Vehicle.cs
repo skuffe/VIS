@@ -15,7 +15,7 @@ namespace VIS.Models
 		public string Model { get; set; }
 
 		[Required]
-		[DisplayName("<b>Year of Make</b>")]
+		[DisplayName("Year of Make")]
 		public int YearOfMake { get; set; }
 
 		[Required]
@@ -93,6 +93,7 @@ namespace VIS.Models
 		public DateTime PolicyExpireDate { get; set; }
 
 		[Required]
+        [DisplayName("Insurance Agency")]
 		public int InsuranceAgencyID { get; set; }
 		public virtual InsuranceAgency InsuranceAgency { get; set; }
 	}
