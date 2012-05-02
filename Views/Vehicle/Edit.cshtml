@@ -12,8 +12,9 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
-    <fieldset>
+    <fieldset style="width:50%;">
         <legend>Vehicle</legend>
+		<div style="float:left;padding-right:5%;">
 
         @Html.HiddenFor(model => model.VehicleID)
 
@@ -73,6 +74,9 @@
             @Html.ValidationMessageFor(model => model.FuelType)
         </div>
 
+		</div>
+
+		<div style="float:left;padding-right:5%;">
         <div class="editor-label">
             @Html.LabelFor(model => model.RegistrationNo)
         </div>
@@ -129,6 +133,9 @@
             @Html.ValidationMessageFor(model => model.PolicyType)
         </div>
 
+		</div>
+
+		<div style="float:left;padding-right:5%;">
         <div class="editor-label">
             @Html.LabelFor(model => model.Policy)
         </div>
@@ -184,11 +191,12 @@
             @Html.DropDownList("InsuranceAgencyID", "---- Select Agency ----")
             @Html.ValidationMessageFor(model => model.InsuranceAgencyID)
         </div>
+		</div>
 
+    </fieldset>
         <p>
             <input type="submit" value="Save" />
         </p>
-    </fieldset>
 }
 
 <div>

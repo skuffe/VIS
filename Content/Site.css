@@ -204,6 +204,7 @@ select {
     padding: 2px;
     font-size: 1.2em;
     color: #444;
+	width:205px;
 }
 
 input[type="submit"] {
@@ -321,4 +322,9 @@ div#title {
 
 .tri-state {
     width: 6em;
+}
+.date 
+{
+	background:url("../Content/images/ui.calendar.gray.png") no-repeat 10px 5px;
+	background-position:right;
 }
