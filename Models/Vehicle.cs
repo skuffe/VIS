@@ -15,7 +15,7 @@ namespace VIS.Models
 		public string Model { get; set; }
 
 		[Required]
-		[DisplayName("Year of Make")]
+		[DisplayName("<b>Year of Make</b>")]
 		public int YearOfMake { get; set; }
 
 		[Required]

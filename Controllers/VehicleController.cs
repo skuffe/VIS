@@ -16,6 +16,7 @@ namespace VIS.Controllers
         //
         // GET: /Vehicle/
 
+		[Authorize]
         public ViewResult Index()
         {
             var vehicles = db.Vehicles.Include(v => v.InsuranceAgency);
@@ -25,6 +26,7 @@ namespace VIS.Controllers
         //
         // GET: /Vehicle/Details/5
 
+		[Authorize]
         public ViewResult Details(int id)
         {
             Vehicle vehicle = db.Vehicles.Find(id);
@@ -34,6 +36,7 @@ namespace VIS.Controllers
         //
         // GET: /Vehicle/Create
 
+		[Authorize]
         public ActionResult Create()
         {
             ViewBag.InsuranceAgencyID = new SelectList(db.InsuranceAgencies, "InsuranceAgencyID", "Name");
@@ -43,6 +46,7 @@ namespace VIS.Controllers
         //
         // POST: /Vehicle/Create
 
+		[Authorize]
         [HttpPost]
         public ActionResult Create(Vehicle vehicle)
         {
@@ -60,6 +64,7 @@ namespace VIS.Controllers
         //
         // GET: /Vehicle/Edit/5
  
+		[Authorize]
         public ActionResult Edit(int id)
         {
             Vehicle vehicle = db.Vehicles.Find(id);
@@ -70,6 +75,7 @@ namespace VIS.Controllers
         //
         // POST: /Vehicle/Edit/5
 
+		[Authorize]
         [HttpPost]
         public ActionResult Edit(Vehicle vehicle)
         {
@@ -86,6 +92,7 @@ namespace VIS.Controllers
         //
         // GET: /Vehicle/Delete/5
  
+		[Authorize]
         public ActionResult Delete(int id)
         {
             Vehicle vehicle = db.Vehicles.Find(id);
@@ -95,6 +102,7 @@ namespace VIS.Controllers
         //
         // POST: /Vehicle/Delete/5
 
+		[Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            

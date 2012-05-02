@@ -16,6 +16,7 @@ namespace VIS.Controllers
         //
         // GET: /InsuranceAgency/
 
+		[Authorize]
         public ViewResult Index()
         {
             return View(db.InsuranceAgencies.ToList());
@@ -24,6 +25,7 @@ namespace VIS.Controllers
         //
         // GET: /InsuranceAgency/Details/5
 
+		[Authorize]
         public ViewResult Details(int id)
         {
             InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
@@ -33,6 +35,7 @@ namespace VIS.Controllers
         //
         // GET: /InsuranceAgency/Create
 
+		[Authorize]
         public ActionResult Create()
         {
             return View();
@@ -41,6 +44,7 @@ namespace VIS.Controllers
         //
         // POST: /InsuranceAgency/Create
 
+		[Authorize]
         [HttpPost]
         public ActionResult Create(InsuranceAgency insuranceagency)
         {
@@ -57,6 +61,7 @@ namespace VIS.Controllers
         //
         // GET: /InsuranceAgency/Edit/5
  
+		[Authorize]
         public ActionResult Edit(int id)
         {
             InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
@@ -66,6 +71,7 @@ namespace VIS.Controllers
         //
         // POST: /InsuranceAgency/Edit/5
 
+		[Authorize]
         [HttpPost]
         public ActionResult Edit(InsuranceAgency insuranceagency)
         {
@@ -81,6 +87,7 @@ namespace VIS.Controllers
         //
         // GET: /InsuranceAgency/Delete/5
  
+		[Authorize]
         public ActionResult Delete(int id)
         {
             InsuranceAgency insuranceagency = db.InsuranceAgencies.Find(id);
@@ -90,6 +97,7 @@ namespace VIS.Controllers
         //
         // POST: /InsuranceAgency/Delete/5
 
+		[Authorize]
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            

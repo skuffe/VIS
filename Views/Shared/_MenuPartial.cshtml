@@ -1,0 +1,5 @@
+﻿<li>@Html.ActionLink("Home", "Index", "Home")</li>
+@if (Request.IsAuthenticated) {
+	<li>@Html.ActionLink("Vehicle", "Index", "Vehicle")</li>
+	<li>@Html.ActionLink("Insurance Agency", "Index", "InsuranceAgency")</li>
+}
